@@ -67,7 +67,7 @@ function test(config, callback) {
 //                                });
 
 
-                            }, 30000);
+                            }, 60000);
                         }
                     },
                     callback: function () {
