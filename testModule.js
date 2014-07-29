@@ -1,7 +1,8 @@
 function test(config, callback) {
 
     var currentpath,
-        catjsmain;
+        catjsmain,
+        catclim =  "/../../../src/module/CATCli.js";
 
     if (config && config.dir) {
         process.chdir(config.dir);
@@ -16,7 +17,7 @@ function test(config, callback) {
         process.send({status: "done"});
     }
 
-    catjsmain = require(require("path").join(currentpath, "/../../src/module/CATCli.js"));
+    catjsmain = require(require("path").join(currentpath, catclim));
 
     catjsmain.init({
         init: "cat",
@@ -31,7 +32,7 @@ function test(config, callback) {
         },
         callback: function () {
 
-            var catjs = require(require("path").join(currentpath, "/../../src/module/CATCli.js"));
+            var catjs = require(require("path").join(currentpath, catclim));
 
             // TODO add copy resources module
             if (config.name === "enyo") {
@@ -67,7 +68,7 @@ function test(config, callback) {
 //                                });
 
 
-                            }, 60000);
+                            }, 30000);
                         }
                     },
                     callback: function () {
