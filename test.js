@@ -1,25 +1,28 @@
+console.log("CatJS running tests from directory: ", process.cwd());
+
 var args = process.argv.slice(2),
+    _extractFolder = "test-apps-master"
     child_process = require('child_process'),
     testdata = [
         {
             name: "sencha",
             testname: "sencha-test",
             port: "8088",
-            cwd: "./test/sencha/",
+            cwd: "./test/" + _extractFolder + "/sencha/",
             tasks: ["t@init", "t@scrap", "t@inject", "t@autotest", "t@server.start", "t@runner.start"]
         },
         {
             name: "enyo",
             testname: "enyo-test",
             port: "8089",
-            cwd: "./test/enyo/",
+            cwd: "./test/"+ _extractFolder +"/enyo/",
             tasks: ["t@init", "t@scrap", "t@inject", "t@server.start", "t@runner.start"]
         },
         {
             name: "catjs_example",
             testname: "catjs_example-test",
             port: "8089",
-            cwd: "./test/catjs_example/",
+            cwd: "./test/" + _extractFolder +"/catjs_example/",
             tasks: ["t@init", "t@scrap", "t@inject", "t@autotest", "t@server.start", "t@runner.start"]
         }
     ],
