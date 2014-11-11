@@ -54,8 +54,9 @@ function task(counter) {
                 task(counter);
            }
        }
-
     });
+    tests[counter].stdout.pipe(process.stdout);
+    tests[counter].stderr.pipe(process.stderr);
 }
 
 
@@ -88,6 +89,8 @@ if (require.main === module) {
                }
 
            });
+           handle.stdout.pipe(process.stdout);
+           handle.stderr.pipe(process.stderr);
        }
 
     };
