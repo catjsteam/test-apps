@@ -55,8 +55,12 @@ function task(counter) {
            }
        }
     });
-    tests[counter].stdout.pipe(process.stdout);
-    tests[counter].stderr.pipe(process.stderr);
+    if (tests[counter].stdout ) {
+        tests[counter].stdout.pipe(process.stdout);
+    }
+    if (tests[counter].stderr) {
+        tests[counter].stderr.pipe(process.stderr);
+    }
 }
 
 
@@ -89,8 +93,12 @@ if (require.main === module) {
                }
 
            });
-           handle.stdout.pipe(process.stdout);
-           handle.stderr.pipe(process.stderr);
+           if (handle.stdout ) {
+               handle.stdout.pipe(process.stdout);
+           }
+           if (handle.stderr ) {
+               handle.stderr.pipe(process.stderr);
+           }
        }
 
     };
