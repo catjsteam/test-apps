@@ -21,7 +21,6 @@ function test(config, callback) {
 
     catjsmain.init({
         init: "cat",
-        debug: true,
         schema: {
             properties: {
                 name: config.testname,
@@ -47,7 +46,6 @@ function test(config, callback) {
                 process.chdir('./cat-project');
                 catjs.init({
                     task: config.tasks,
-                    debug: true,
                     taskcb: function (task) {
                         if (task && task === "t@runner.start") {
 
