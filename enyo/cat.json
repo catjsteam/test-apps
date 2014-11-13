@@ -12,7 +12,7 @@
         "test-failure-timeout": "This is a timeout for failing the tests in case of general application malfunction. Set the timeout in seconds. "
     },
 
-    "name":"sencha-test",
+    "name":"enyo-test",
     "ip":null,
     "port":null,
     "tests": [
