@@ -5,7 +5,8 @@
   "author": {
     "name": "arik",
     "email": "lewin.arik@gmail.com",
-    "key":"AKIAL02POOJN1tedUP23"
+    "key":"AKIAL02POOJN1tedUP23",
+    "gcp":"AIzaSyCl3-ltMjV7x9h4GjthqWpSEf24nAa0JGg"
   },
   "main": "Gruntfile.js",
   "engines": {
