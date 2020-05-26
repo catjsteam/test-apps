@@ -1,10 +1,16 @@
-name: Workflow
+  
+name: Mainspec
 on: [push]
+
 jobs:
   build:
-    name: Build
+    name: Spectral
     runs-on: ubuntu-latest
     steps:
-    - name: Spectral Scan
-      run: spectral run
-    #...
+      - uses: actions/checkout@v1
+      - name: Install
+        run: curl -L spectralops.io/get | sudo sh
+      - name: Files
+        run: ls -ltr
+      - name: Scan
+        run: spectral --version && spectral run
